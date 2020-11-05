@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Andi R. Portfolio /// ndrr.xyz" />
+	<meta name="keywords" content="Andi, ndr, ndrr, ndrr.xyz, three.js, web development, modern, portfolio, developer, software engineer"/>
+	<meta name="author" content="Andi R."/>
+
+
+	<title>NDRR.XYZ /// </title>
+
+
+	
+
+	<!-- MAIN     -->
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>	
+		<link rel="stylesheet" type="text/css" href="css/navlogoanim.css"/>
+
+		
+	<!-- END_MAIN -->
+
+	<!-- MISC     -->
+		
+		
+
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+	<!-- END_MISC -->	
+
+</head>
+
+<body class="loading" id="page-top">
+	<main>
+
+		<!-- NAVIGATION -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+			<a class="navbar-brand" href="#">
+				<svg style="left:0px; top:0px; position:relative;" width="250" height="50"
+					class="d-inline-block align-top" alt="" id="logo" viewBox="0 0 845 106" fill="none">
+					<path
+						d="M131.432 1.19998H92.12L83.048 50.016L60.152 1.19998H20.84L2.12 102H41.432L50.504 53.04L73.256 102H112.712L131.432 1.19998ZM51.224 51.312H49.496L40.28 100.56H3.848L21.992 2.49598H59.288L82.472 51.888H84.056L93.272 2.49598H129.704L111.56 100.56H74.12L51.224 51.312Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M175.265 102C212.993 102 232.577 87.024 238.913 53.328C241.937 37.344 239.633 24.672 232.145 15.6C224.081 6.09599 210.689 1.19998 191.969 1.19998H144.449L125.729 102H175.265ZM145.457 2.49598H191.969C210.257 2.49598 223.361 7.24798 230.993 16.464C238.337 25.248 240.497 37.488 237.617 53.184C231.425 86.016 212.273 100.704 175.265 100.704H127.313L145.457 2.49598ZM178.001 68.016C190.385 68.016 197.441 62.688 199.601 51.744C200.465 46.56 199.889 42.384 197.585 39.648C195.137 36.768 190.817 35.184 184.769 35.184H175.985L169.937 68.016H178.001ZM177.137 36.624H184.769C190.385 36.624 194.273 37.92 196.433 40.512C198.593 42.96 199.169 46.704 198.161 51.456C196.289 61.824 189.809 66.576 178.001 66.576H171.521L177.137 36.624Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M332.07 66.432C339.99 60.384 344.886 51.312 347.334 38.496C349.206 28.128 347.478 19.344 342.006 12.864C335.814 5.37599 324.726 1.19998 311.046 1.19998H259.062L240.342 102H279.654L284.55 75.504L294.774 75.36L302.982 102H345.03L332.07 66.432ZM295.782 74.064H283.398L278.502 100.56H242.07L260.214 2.49598H311.046C324.294 2.49598 334.95 6.52798 340.998 13.728C346.182 19.92 347.91 28.272 346.038 38.208C343.59 50.88 338.694 59.808 330.486 65.856L343.158 100.56H303.99L295.782 74.064ZM298.518 46.992C305.718 46.992 309.174 44.544 310.326 38.496C310.758 35.904 310.326 33.744 309.174 32.304C307.59 30.432 305.142 29.568 301.398 29.568H291.75L288.438 46.992H298.518ZM292.758 31.008H301.398C304.566 31.008 306.87 31.728 308.166 33.168C309.03 34.32 309.318 36.048 309.03 38.208C308.022 43.536 304.998 45.696 298.518 45.696H290.022L292.758 31.008Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M445.555 66.432C453.475 60.384 458.371 51.312 460.819 38.496C462.691 28.128 460.963 19.344 455.491 12.864C449.299 5.37599 438.211 1.19998 424.531 1.19998H372.547L353.827 102H393.138L398.035 75.504L408.259 75.36L416.466 102H458.514L445.555 66.432ZM409.267 74.064H396.883L391.987 100.56H355.555L373.698 2.49598H424.531C437.779 2.49598 448.435 6.52798 454.483 13.728C459.667 19.92 461.394 28.272 459.522 38.208C457.074 50.88 452.179 59.808 443.971 65.856L456.643 100.56H417.474L409.267 74.064ZM412.003 46.992C419.203 46.992 422.658 44.544 423.81 38.496C424.242 35.904 423.811 33.744 422.659 32.304C421.075 30.432 418.627 29.568 414.883 29.568H405.234L401.923 46.992H412.003ZM406.242 31.008H414.883C418.051 31.008 420.355 31.728 421.651 33.168C422.515 34.32 422.802 36.048 422.514 38.208C421.506 43.536 418.483 45.696 412.003 45.696H403.507L406.242 31.008Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M482.863 104.592C493.087 104.592 501.439 97.824 503.167 88.032C504.175 82.704 502.879 77.232 499.711 73.344C496.687 69.744 492.367 67.728 487.183 67.728C476.959 67.728 468.895 74.208 467.167 83.856C466.159 89.184 467.599 94.944 470.911 99.12C473.935 102.72 478.255 104.592 482.863 104.592ZM487.183 69.168C491.935 69.168 495.967 70.896 498.703 74.208C501.583 77.808 502.879 82.848 501.871 87.888C500.143 96.96 492.367 103.296 482.863 103.296C478.543 103.296 474.799 101.424 472.063 98.256C468.895 94.368 467.455 89.04 468.463 84C470.191 75.072 477.679 69.168 487.183 69.168Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M603.919 49.728L632.143 1.19998H585.63L574.542 34.032H573.391L567.487 1.19998H523.854L539.695 49.584L510.174 102H556.398L568.495 69.168H570.799L577.567 102H621.055L603.919 49.728ZM571.951 67.872H567.63L555.534 100.56H512.335L541.135 49.728L525.727 2.49598H566.334L572.239 35.328H575.406L586.638 2.49598H629.839L602.479 49.584L619.182 100.56H578.719L571.951 67.872Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M701.292 73.632L747.66 1.19998H702.732L686.604 38.784H686.46L678.972 1.19998H638.22L662.124 73.488L656.796 102H696.108L701.292 73.632ZM663.42 73.344L640.092 2.49598H677.82L685.308 40.224H687.468L703.596 2.49598H745.212L700.14 73.056L694.956 100.56H658.38L663.42 73.344Z"
+						stroke="#5610FE" stroke-width="2" />
+					<path
+						d="M833.554 66.864H790.93L836.002 41.664L843.633 1.19998H756.658L750.177 36.624H785.745L740.818 62.976L733.617 102H827.073L833.554 66.864ZM742.114 63.84L787.33 37.2L787.617 35.184H751.761L757.81 2.49598H842.049L834.849 40.8L789.778 66L789.346 68.16H831.969L825.922 100.56H735.201L742.114 63.84Z"
+						stroke="#5610FE" stroke-width="2" />
+				</svg>
+			</a>
+
+			<button class="navbar-toggler navbar-dark h1-nav-standard collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false">
+				<span class="navbar-toggler-icon" id="navbar-toggler"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">HOME</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">PROJECTS</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">SKILLS</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">ABOUT ME</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- END_NAVIGATION -->
+
+		<!-- SOCIALS -->
+		<div class="sticky-container">
+			<ul class="sticky">
+				<li>
+					<img width="30" height="30" title="" alt="" src="assets/img/socials/youtube.png" />
+					<a href="https://www.youtube.com/channel/UC2undxGKXbzdH11P9F2zSKQ" target="_blank">YOUTUBE</a>
+				</li>
+				<li>
+					<img width="32" height="32" title="" alt="" src="assets/img/socials/gmail.png" />
+					<input type="text" value="andi.retkoceri.ar@hotmail.com" style="display:none;" id="myInput">
+					<a onclick="copyEmail()">EMAIL</a>
+				</li>
+				<li>
+					<img width="32" height="32" title="" alt="" src="assets/img/socials/github.png" />
+					<a href="https://github.com/fxtxre target=" _blank">GITHUB</a>
+				</li>
+			</ul>
+		</div>
+		<!-- END_SOCIALS -->
+
+
+		<!-- LANDINGPAGE -->
+		<div class="grid" id="landing-page">
+			<div class="grid__item theme-1">
+				<div class="grid__item-content" style="padding: 0px !important;">
+					<div class="content">
+						<canvas class="scene scene--full" id="scene" style="margin-bottom: 150px;"></canvas>
+					</div>
+					<div id="text_landing">
+						<div class="landing_text">
+							<a class="hi"> HI, <br> I'M ANDI, <br></a>
+							<a class="invertedbackground software_engineer"> SOFTWARE ENGINEER </a><br>
+							<a class="invertedbackground swdsf"> / SOFTWARE ENGINEER / WEB DEVELOPER / DESIGNER / FREELANCER /<br></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- END_LANDINGPAGE -->
+
+
+		<!-- PROJECT_LOGOS -->
+		<section class="about-section text-center" id="projects">
+			<div class="center_log">
+
+				<div class="row_log scale_down">
+
+					<div class="column_log namesnipe">
+						<img src="assets/img/projects/namesnipe_logo_col.png" height="150" >
+					</div>
+
+					<div class="column_log bouje">
+						<img src="assets/img/projects/bouje_logo_col.png" height="150">
+					</div>
+
+					<div class="column_log ndrrv1">
+						<img src="assets/img/projects/ndrrv1_logo_col.png" height="150">
+					</div>
+
+					<div class="column_log odyssey_r">
+						<img src="assets/img/projects/odysseyweb_logo_col.png" height="150">
+					</div>
+
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 mx-auto">
+						<h2 class="text-white mb-4">MAIN PROJECTS</h2>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- END_PROJECT_LOGOS -->
+
+		<!-- PROJECT_CARDS -->
+		<div class="container-lg">
+
+			<!-- NAMESNIPE_CARD -->
+			<div class="card-body">
+				<div class="row project_card" id="namesnipe_card" onclick="window.open('https://namesnipe.xyz')">
+					<div class="col d-flex justify-content-center" id="namesnipe_img-card">
+						<img src="assets/img/projects/namesnipe_logo_col_shadow.png" height="100" style="transform: scale(0.5);">
+					</div>
+					<div class="col-6" id="text-card">
+						<h2 class="project_card_headline">NAMESNIPE</h2>
+						<div class="project_card_lead">
+							The customer is able to snipe his desired username on several platforms.
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between align-items-center" id="project_footer" style="background: #ff0084; background: -webkit-linear-gradient(to right, #33001b, #ff0084); background: linear-gradient(to right, #33001b, #ff0084);">
+					<small class="text-muted_state flex-grow-1">Status: Webapp Development</small>
+					<div class="btn-group" style="margin-right: 130px;" id="btn-group-namesnipe">
+						<button type="button" class="btn btn-sm">Github</button>
+						<button type="button" class="btn btn-sm"">Demo</button>
+					</div>
+					<small class="text-muted_tech">Python, Django</small>
+				</div>
+			</div>
+			<!-- END-NAMESNIPE_CARD -->
+
+			<!-- BOUJE_CARD -->
+			<div class="card-body">
+				<div class="row project_card" id="bouje_card">
+					<div class="col d-flex justify-content-center" id="bouje_img-card">
+						<img src="assets/img/projects/bouje_logo_col_shadow.png" height="100"
+							style="transform: scale(0.5);">
+					</div>
+					<div class="col-6" id="text-card">
+						<h2 class="project_card_headline">BOUJE</h2>
+						<div class="project_card_lead">
+							Fashion Store based in Salzburg, Austria.
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between align-items-center" id="project_footer" style="background: #fc4a1a; background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a); background: linear-gradient(to right, #f7b733, #fc4a1a); color: black !important;">
+					<small class="text-muted_state flex-grow-1">Status: Shopify research</small>
+					<div class="btn-group" style="margin-right: 182px;" id="btn-group-bouje">
+						<button type="button" class="btn btn-sm" style="color: black !important;">Github</button>
+						<button type="button" class="btn btn-sm  style="color: black !important;">Demo</button>
+					</div>
+					<small class="text-muted_tech">Shopify</small>
+				</div>
+			</div>
+			<!-- END-BOUJE_CARD -->
+
+			<!-- NDRR_V1_CARD -->
+			<div class="card-body">
+				<div class="row project_card" id="ndrr_card" onclick="window.open('https://ndrr.xyz/old')">
+					<div class="col d-flex justify-content-center" id="ndrr_img-card">
+						<img id="ndrr_logo_proj" src="assets/img/projects/ndrrv1_logo_col_shadow.png" height="100"
+							style="transform: scale(0.5);">
+					</div>
+					<div class="col-6" id="text-card">
+						<h2 class="project_card_headline">NDRR_V1</h2>
+						<div class="project_card_lead">
+							My first portfolio. The base of my V2.
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between align-items-center" id="project_footer" style="background: #8E0E00; background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00); background: linear-gradient(to right, #1F1C18, #8E0E00);">
+					<small class="text-muted_state flex-grow-1">Status: Finished</small>
+					<div class="btn-group" style="margin-right: 37px;" id="btn-group-ndrr">
+						<button type="button" class="btn btn-sm">Github</button>
+						<button type="button" class="btn btn-sm">Demo</button>
+					</div>
+					<small class="text-muted_tech">HTML, CSS, jQuery, Bootstrap</small>
+				</div>
+			</div>
+			<!-- END-NDRR_V1_CARD -->
+
+			<!-- ODYSSEY_WEB_CARD -->
+			<div class="card-body">
+				<div class="row project_card" id="odyssey_card">
+						<div class=" col d-flex justify-content-center" id="odyssey_img-card">
+							<img id="odyssey_logo_proj" src="assets/img/projects/odysseyweb_logo_col_shadow.png" height="100" style="transform: scale(0.5);">
+						</div>
+					<div class="col-6" id="text-card">
+						<h2 class="project_card_headline">ODYSSEY</h2>
+						<div class="project_card_lead">
+							Modern looking info page about "Odyssey_R" <i>made by n0xius</i>.
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between align-items-center" id="project_footer" style="background: #00d2ff; background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff); background: linear-gradient(to right, #3a7bd5, #00d2ff); color: black !important;">
+					<small class="text-muted_state flex-grow-1">Status: Three.js research</small>
+						<div class="btn-group" style="margin-right: 22px;" id="btn-group-odyssey">
+							<button type="button" class="btn btn-sm " style="color: black !important;">Github</button>
+							<button type="button" class="btn btn-sm " style="color: black !important;">Demo</button>
+						</div>
+					<small class="text-muted_tech">HTML, SCSS, Three.js, Bootstrap</small>
+				</div>
+			</div>
+			<!-- END-ODYSSEY_WEB -->
+			
+		</div>
+		<!-- END_PROJECT_CARDS -->
+
+
+		<!-- SIDE_PROJECTS_CARD -->
+		<div class="album py-5">
+			<div class="container">
+				<h2 class="text-white mb-4">SIDE PROJECTS</h2>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4 box-shadow">
+							<div class="card-body">
+								<p class="card-text"><strong>DIGITZR - My thesis project </h6></strong><span
+										class="badge badge-danger">inactive</span><br> Is a device which allows the
+									customer to 3D scan objects</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">Github</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Demo</button>
+									</div>
+									<small class="text-muted">C++</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 box-shadow">
+							<div class="card-body">
+								<p class="card-text"><strong>Reactive LED Strips </h6></strong><span
+										class="badge badge-warning">postponed</span><br>Arduino + Processing + BD139 NPN
+									+ WS2812B</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">Github</button>
+										<a href="https://www.youtube.com/watch?v=buRt3igY0UE" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Demo</a>
+									</div>
+									<small class="text-muted">Java</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 box-shadow">
+							<div class="card-body">
+								<p class="card-text"><strong>Namesnipe_v1 </h6></strong><span
+										class="badge badge-success">finished</span><br>This project was the prototype of
+									namesnipe.xyz</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">Github</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Demo</button>
+									</div>
+									<small class="text-muted">C++</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- END_SIDE_PROJECTS_CARD -->
+
+
+		<!-- SKILLS -->
+		<div class="container-lg" id="skills">
+			<div class="jumbotron jumbotron-fluid" style="margin-top: 35px;">
+				<div class="container">
+					<h2 class="display-4 d-flex justify-content-center">SKILLS</h2>
+
+					<div class="skill-set-content d-flex flex-wrap">
+
+						<ul class="skill-set_list">
+							<h5>Programming</h3>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/cplusplus.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											C++
+										</div>
+										<div class="skill-set-info">
+											several projects
+										</div>
+									</div>
+								</li>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/python.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											Python
+										</div>
+										<div class="skill-set-info">
+											namesnipe bot
+										</div>
+									</div>
+								</li>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/c.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											C
+										</div>
+										<div class="skill-set-info">
+											school projects
+										</div>
+									</div>
+								</li>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/asm.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											Assembler
+										</div>
+										<div class="skill-set-info">
+											school projects
+										</div>
+									</div>
+								</li>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/java.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											Java
+										</div>
+										<div class="skill-set-info">
+											school projects
+										</div>
+									</div>
+								</li>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/delphi.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											Delphi
+										</div>
+										<div class="skill-set-info">
+											Slackbot
+										</div>
+									</div>
+								</li>
+
+								<li class="skill-set-item d-flex">
+									<div class="skills-set-icon align-self-center">
+										<img src="assets/img/icons/javascript.png" width="50">
+									</div>
+									<div class="skill-set-details align-self-center">
+										<div class="skill-set-headline">
+											JavaScript
+										</div>
+										<div class="skill-set-info">
+											ndrr_v1,v2
+										</div>
+									</div>
+								</li>
+
+						</ul>
+
+						<ul class="skill-set_list">
+							<h5>Visuals</h5>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/photoshop.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Photoshop
+									</div>
+									<div class="skill-set-info">
+										+6 years experience
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/cinema4d.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Cinema 4D
+									</div>
+									<div class="skill-set-info">
+										personal use
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/premiere.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Premiere CC
+									</div>
+									<div class="skill-set-info">
+										personal use
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/lightroom.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Lightroom
+									</div>
+									<div class="skill-set-info">
+										personal use
+									</div>
+								</div>
+							</li>
+
+						</ul>
+
+						<ul class="skill-set_list">
+							<h5>HARDWARE</h5>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/eagle.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										EAGLE
+									</div>
+									<div class="skill-set-info">
+										school projects
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/solidedge.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Solid Edge
+									</div>
+									<div class="skill-set-info">
+										school projects
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/ltspice.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										LTSpice
+									</div>
+									<div class="skill-set-info">
+										school projects
+									</div>
+								</div>
+							</li>
+
+
+						</ul>
+
+						<ul class="skill-set_list">
+							<h5>Others</h5>
+							
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/bootstrap.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Bootstrap
+									</div>
+									<div class="skill-set-info">
+										ndrr_v1,v2
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex align-self-center">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/django.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Django
+									</div>
+									<div class="skill-set-info">
+										learning rn
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/arduino.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Arduino
+									</div>
+									<div class="skill-set-info">
+										LED logic
+									</div>
+								</div>
+							</li>
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/processing.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										Processing
+									</div>
+									<div class="skill-set-info">
+										LED GUI
+									</div>
+								</div>
+							</li>
+
+
+							<li class="skill-set-item d-flex">
+								<div class="skills-set-icon align-self-center">
+									<img src="assets/img/icons/nodejs.png" width="50">
+								</div>
+								<div class="skill-set-details align-self-center">
+									<div class="skill-set-headline">
+										NodeJS
+									</div>
+									<div class="skill-set-info">
+										namesnipe_v1
+									</div>
+								</div>
+							</li>
+
+						</ul>
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- END_SKILLS -->
+
+		<!-- ABOUT_ME -->
+		<div class="container-lg">
+			<section class="about-section" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<h2 class="text-white mb-4 text-center" style="padding-top: 30px;">ABOUT ME</h2>
+							<p class="lead text-white about_me">
+								I'm Andi, a 19 year old software developer from Salzburg, Austria.<br><br>
+
+								- because a lot of friends have asked me: <i>"what does ndr stand for?"</i>. If you pronouce nd
+								in english you get Andy... and the r stands for my surname
+
+								<br><br>And also, I like to draw.
+							</p>
+
+
+							<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="assets/img/drawings/KyloRenLatest.png" class="d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Kylo Ren</h5>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="assets/img/drawings/Black Panther.png" class="d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Black Panther</h5>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="assets/img/drawings/Venom.png" class="d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Venom</h5>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="assets/img/drawings/Lana Del Rey.png" class="d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Lana Del Rey</h5>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="assets/img/drawings/Pixelart_Laval_1.png" class="d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Pixelart 1</h5>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="assets/img/drawings/Pixelart_Winter.png" class="d-block w-100">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Pixelart 2</h5>
+										</div>
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+									data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+									data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- END_ABOUT_ME -->
+
+		<!-- FOOTER -->
+		<footer class="page-footer font-small unique-color-dark">
+
+			<div style="background-color: #5610fe;">
+				<div class="container">
+
+					
+					<div class="row py-4 d-flex align-items-center"
+						style="padding-bottom: 0px !important; padding-top: 0px !important; margin-top: 100px;">
+
+						
+						<div class="text-center text-white">
+							<h6 class="mb-0" style="margin-left: 20px">NDRR.XYZ /// NDRR.XYZ /// NDRR.XYZ </h6>
+						</div>
+						
+
+					</div>
+					
+
+				</div>
+			</div>
+
+			
+			<div class="footer-copyright text-center py-3"><small>© 2020 Copyright:
+				<a href="https://ndrr.xyz/">NDRR.XYZ // EVERYTHING MADE WITH ❤️</small> </a>
+			</div>
+			
+
+		</footer>
+		<!-- END_FOOTER -->
+
+
+	</main>
+
+
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<script src="js/jumptopage.js"></script>
+	<script src="js/perlin.js"></script>
+	<script src="js/sphere3d.js"></script>
+	<script> imagesLoaded(document.querySelectorAll('img'), () => {document.body.classList.remove('loading');}); </script>
+
+</body>
+
+</html>
